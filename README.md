@@ -1,4 +1,4 @@
-# quarkus-panache-h2 project
+# wenger-quarkus-function-knative-events
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
