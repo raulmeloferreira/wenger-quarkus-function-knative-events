@@ -1,13 +1,13 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-   name: function-knative-events
+   name: wenger-function-knative-events
 spec:
    template:
       metadata:
-         name: function-knative-events-001
+         name: wenger-function-knative-events-001
          annotations:
-            autoscaling.knative.dev/target: '1'
+            autoscaling.knative.dev/target: "1"
       spec:
          containers:
          -  image: docker.io/raulmeloferreira/wenger-quarkus-function-knative-events:0.0.3

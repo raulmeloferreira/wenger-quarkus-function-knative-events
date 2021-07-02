@@ -1,12 +1,12 @@
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
-   name: defaultfunc
+   name: wenger-defaultfunc-trigger
 spec:
    broker: default
    filter:
       attributes:
-         type: defaultFunc
+         type: hellofunc
    subscriber:
       ref:
          apiVersion: serving.knative.dev/v1
