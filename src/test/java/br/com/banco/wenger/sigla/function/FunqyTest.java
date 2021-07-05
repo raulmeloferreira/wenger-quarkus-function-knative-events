@@ -19,7 +19,7 @@ public class FunqyTest {
         RestAssured.given().contentType("application/json")
                 .header("ce-specversion", "1.0")
                 .header("ce-id", UUID.randomUUID().toString())
-                .header("ce-type", "hellofunc")
+                .header("ce-type", "pojoFunc")
                 .header("ce-source", "test")
                 .body("\"Start::defaultChain\"")
                 .post("/")

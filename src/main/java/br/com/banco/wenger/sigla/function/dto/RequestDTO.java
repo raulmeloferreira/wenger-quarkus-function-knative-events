@@ -1,17 +1,23 @@
 package br.com.banco.wenger.sigla.function.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class RequestDTO {
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public RequestDTO(String data) {
+		super();
+		this.data = data;
+	}
+	
+	public RequestDTO() {
+		super();
+	}
 
 	private String data;
 }

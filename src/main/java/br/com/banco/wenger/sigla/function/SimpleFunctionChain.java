@@ -28,7 +28,27 @@ public class SimpleFunctionChain {
      * @return
      */
     @Funq
-    public ResponseDTO defaultFunc(RequestDTO req, @Context CloudEvent event) {
+    public ResponseDTO pojoFunc(RequestDTO req, @Context CloudEvent event) {
+        log.info("*** execute ***" + event.id());
+        log.info("*** req ***" + req.getData());
+        
+        ResponseDTO resp = new ResponseDTO();
+        resp.setData("req" + req.getData());
+        resp.setId(event.id());
+        
+        return resp;
+    }
+    
+    @Funq
+    public String stringFunc(String req, @Context CloudEvent event) {
+        log.info("*** execute ***" + event.id());
+        log.info("*** req ***" + req);
+        
+        return "resp+" + req;
+    }
+    
+    @Funq
+    public ResponseDTO pojoFuncSemCloudEvent(RequestDTO req, @Context CloudEvent event) {
         log.info("*** execute ***" + event.id());
         log.info("*** req ***" + req.getData());
         
